@@ -1,0 +1,29 @@
+.search-container-cpf {
+    float: left;
+    padding-bottom: 15px;
+    width: 100%;
+  }
+
+.search-container-cpf button {
+    background: #ddd;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-left: 2px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+
+}
+.list-group-item {
+  border-style: none;
+}
+p{
+  display: block;
+}

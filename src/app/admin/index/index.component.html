@@ -1,0 +1,23 @@
+<div class="container-fluid mt-5">
+  <div class="container">
+    <h1>Gerentes por cliente</h1>
+    <table class="table" style="text-align: center">
+      <thead>
+        <tr>
+          <th scope="col">Gerente</th>
+          <th scope="col">Clientes</th>
+          <th scope="col">Saldos positivos</th>
+          <th scope="col">Saldos negativos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let gerente of gerentes">
+          <td>{{ gerente.nome }}</td>
+          <td>{{ gerente.clientes.length }}</td>
+          <td class="text-success">R$ {{ gerente.saldosPositivos }}</td>
+          <td class="text-danger">R$ {{ gerente.saldosNegativos }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

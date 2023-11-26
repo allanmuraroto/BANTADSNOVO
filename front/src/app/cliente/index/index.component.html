@@ -1,0 +1,92 @@
+<div class="container-fluid">
+    <div class="card text-center mt-2 mb-2">
+
+        <div *ngIf="mostrar == true" class="card-body">
+            <h5 class="card-text">Saldo:******<i class="fa-solid fa-eye" (click) = "hide()"></i> </h5>
+        </div>
+
+        <div *ngIf="mostrar == false" class="card-body">
+            <h5 class="card-text">Saldo: <p  [ngStyle]="{ 'color': color, 'display':'inline'}">R${{conta?.saldo}}</p> <i class="fa-solid fa-eye-slash" (click) = "hide()"></i></h5>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-sm-4">
+            <div class="wrimagecard wrimagecard-topimage">
+                <div class="wrimagecard-topimage_header">
+                    <i class="fa-solid fa-money-bill" style="color:#003bfd"></i>
+                </div>
+                <div class="wrimagecard-topimage_title">
+                    <button type="button" class="btn btn-outline-secondary" (click)="abrirModal(1)">
+                        <h4>Depositar
+                            <div class="pull-right badge" id="WrControls"></div>
+                        </h4>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="wrimagecard wrimagecard-topimage">
+
+                <div class="wrimagecard-topimage_header">
+                    <i class="fa-solid fa-hand-holding-dollar" style="color:#003bfd"></i>
+                </div>
+                <div class="wrimagecard-topimage_title">
+                    <button type="button" class="btn btn-outline-secondary" (click)="abrirModal(2)">
+                        <h4>Sacar
+                            <div class="pull-right badge" id="WrControls"></div>
+                        </h4>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="wrimagecard wrimagecard-topimage">
+
+                <div class="wrimagecard-topimage_header">
+                    <i class="fa-solid fa-money-bill-transfer" style="color:#003bfd"> </i>
+                </div>
+                <div class="wrimagecard-topimage_title">
+                    <button type="button" class="btn btn-outline-secondary" (click)="abrirModal(3)">
+                        <h4>Transferir
+                            <div class="pull-right badge" id="WrControls"></div>
+                        </h4>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="wrimagecard wrimagecard-topimage">
+
+                <div class="wrimagecard-topimage_header">
+                    <i class="fa-solid fa-copy" style="color:#003bfd"> </i>
+                </div>
+                <div class="wrimagecard-topimage_title">
+                    <button type="button" class="btn btn-outline-secondary" (click)="abrirModal(4)">
+                        <h4>Extratos
+                            <div class="pull-right badge" id="WrControls"></div>
+                        </h4>
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-4">
+            <div class="wrimagecard wrimagecard-topimage">
+
+                <div class="wrimagecard-topimage_header">
+                    <i class="fa-solid fa-sack-dollar" style="color:#003bfd"> </i>
+                </div>
+                <div class="wrimagecard-topimage_title">
+                    <button type="button" class="btn btn-outline-secondary" (click)="abrirModal(5)">
+                        <h4>Ver Saldo
+                            <div class="pull-right badge" id="WrControls"></div>
+                        </h4>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

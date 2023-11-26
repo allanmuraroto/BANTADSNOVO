@@ -1,0 +1,33 @@
+<div class="container-fluid">
+
+    <!-- <div class="card text-center mt-2 mb-2">
+        <div *ngIf="mostrar == true" class="card-body">
+            <h5 class="card-text">Saldo: <i class="fa-solid fa-eye" (click) = "hide()"></i> </h5>
+        </div>
+        <div *ngIf="mostrar == false" class="card-body">
+            <h5 class="card-text">Saldo: <p  [ngStyle]="{ 'color': color, 'display':'inline'}">R$: {{conta?.saldo}}</p> <i class="fa-solid fa-eye-slash" (click) = "hide()"></i></h5>
+        </div>
+    </div> -->
+
+    <div class="row client">
+        <div class="client_options">
+            <div class="options title">Portal do Cliente</div>
+            <a class="options">Perfil</a>
+            <a class="options" type="button" (click)="abrirModal(5)">
+                Ver Saldo
+            </a>
+            <a class="options" type="button" (click)="abrirModal(1)">
+                Depositar
+            </a>
+            <a class="options" type="button" (click)="abrirModal(2)">
+                Sacar
+            </a>
+            <a class="options" type="button" (click)="abrirModal(3)">
+                Transferir
+            </a>
+            <a class="options" type="button" (click)="abrirModal(4)">
+                Extratos
+            </a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="modal-header">
+  <h5 class="modal-title">Efetuar Saque</h5>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" (click)="activeModal.dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="registration-form">
+    <h4></h4>
+    <section>
+      <form #formSaque="ngForm">
+        <div class="form-group">
+
+          <input type="number" min="1" [max]="max" class="form-control item" id="valor" name="valor" [(ngModel)]="valor"
+            #Valor="ngModel" placeholder="Valor" [required]="true">
+          <div [hidden]="!Valor.errors?.['min']">
+            o valor precisa ser maior que R$ 0
+          </div>
+          <div [hidden]="!Valor.errors?.['max']">
+            Saldo indisponivel
+          </div>
+          <div [hidden]="!Valor.errors?.['required']">
+            Valor invalido
+          </div>
+        </div>
+      </form>
+    </section>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-primary" (click)="sacar()">Sacar</button>
+  <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="activeModal.close()">
+    Cancelar</button>
+</div>

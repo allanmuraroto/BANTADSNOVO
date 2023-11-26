@@ -1,0 +1,14 @@
+/app/src/main/java/com/bantads/auth/CriarAuthDTO.java
+/app/src/main/java/com/bantads/auth/events/CriarAutenticacaoEvent.java
+/app/src/main/java/com/bantads/auth/UserRepository.java
+/app/src/main/java/com/bantads/auth/FazerAuthDTO.java
+/app/src/main/java/com/bantads/auth/events/EventsHandler.java
+/app/src/main/java/com/bantads/auth/User.java
+/app/src/main/java/com/bantads/auth/AuthService.java
+/app/src/main/java/com/bantads/auth/events/RemoverAutenticacaoEvent.java
+/app/src/main/java/com/bantads/auth/AuthController.java
+/app/src/main/java/com/bantads/auth/UserDetailDTO.java
+/app/src/main/java/com/bantads/auth/UserNivel.java
+/app/src/main/java/com/bantads/auth/events/SetPasswordEvent.java
+/app/src/main/java/com/bantads/auth/events/EventsConfig.java
+/app/src/main/java/com/bantads/auth/AuthApplication.java

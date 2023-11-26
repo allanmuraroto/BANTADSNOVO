@@ -1,0 +1,40 @@
+<div class="form-login">
+    <form #formLogin="ngForm">
+        <div class="image">
+            <img src="assets/img/user.png" width="150">
+        </div>
+        <section>
+            <div class="form-group">
+                <label><b>E-mail</b></label>
+                <input type="text" class="form-control item" id="email" name="email" placeholder="Digite o e-mail"
+                    [(ngModel)]="login.email" #email="ngModel" required>
+                <div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger item">
+                    <div [hidden]="!email.errors['required']">
+                        E-mail inválido. Por favor, digite novamente.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label><b>Senha</b></label>
+                <input type="password" class="form-control item" id="senha" name="senha" placeholder="Digite a senha"
+                    minlength="6" [(ngModel)]="login.senha" #senha="ngModel" required>
+                <div *ngIf="senha.errors && (senha.dirty || senha.touched)" class="alert alert-danger item">
+                    <div [hidden]="!senha.errors['required']">
+                        Senha inválida. Por favor, digite novamente
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group button">
+                <button type="button" class="btn btn-block create-account" (click)="logar()"
+                    [disabled]="!formLogin.form.valid">
+                    Entrar
+                </button>
+            </div>
+
+            <div class="form-group link">
+                <a [routerLink]="['/cliente/autocadastro']">Criar conta</a>
+            </div>
+        </section>
+    </form>
+</div>

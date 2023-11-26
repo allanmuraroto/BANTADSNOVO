@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "a35f8aac-8741-439b-a9cd-f352dfdc6486",
+		"name": "Bantads",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11497896"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/v1/autocadastro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/v1/autocadastro",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"autocadastro"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"email\": \"gerente-803fad3439@gmail.com\",\r\n     \"senha\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/v1/logar",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"logar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contas Pendentes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJnZXJlbnRlLTgwM2ZhZDM0MzlAZ21haWwuY29tIiwiY3BmIjpudWxsLCJzYWx0ZWRTZW5oYSI6IiQyYSQxMCRZczBiQWlPZXhJemJiYy5XTkRnRkhPVjZtM3VCZE1HTS9LMUtkci5YM3JNSEs3Zi9TNEptaSIsIm5pdmVsIjoxLCJpYXQiOjE2NjIyNDUwNjgsImV4cCI6MTY2MjUwNDI2OH0.4QUITDX9F17WhOn_eVks25VzSHjcSCis0PAJYar8cB8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/v1/contas/pendentes?cpf=27306970385",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"contas",
+						"pendentes"
+					],
+					"query": [
+						{
+							"key": "cpf",
+							"value": "27306970385"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

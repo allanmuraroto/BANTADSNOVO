@@ -1,0 +1,72 @@
+<div>
+  <div class="search-container-cpf">
+    <h1>Consultar Cliente</h1>
+    <form #formSearch="ngForm" class="input-search">
+      <input type="text" placeholder="Digite o CPF" id="cpf" name="cpf" [(ngModel)]="cpf"
+        data-inputmask="'mask': '99999999999'">
+      <button type="submit" (click)="buscaClientePorCPF()">Buscar</button>
+    </form>
+
+    <div class="row justify-content-md-center client-data">
+      <div *ngIf="consultado == true" class="row">
+        <div class="col-4">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <p><b>Nome: </b>{{cliente?.nome}}</p>
+            </li>
+            <li class="list-group-item">
+              <p><b>CPF: </b>{{cliente?.cpf}}</p>
+            </li>
+            <li class="list-group-item">
+              <p><b>E-mail: </b>{{cliente?.email}}</p>
+            </li>
+            <li class="list-group-item">
+              <p><b>Salário: </b>R$: {{cliente?.salario}}</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <p><b>Número da conta: </b>{{cliente?.conta?.id}}</p>
+            </li>
+            <li class="list-group-item">
+              <p><b>Saldo: </b>R$: {{cliente?.conta?.saldo}}</p>
+            </li>
+            <li class="list-group-item">
+              <p><b>Status: </b>{{cliente?.conta?.status}}</p>
+            </li>
+            <li class="list-group-item">
+              <p><b>Limite: </b> R$: {{cliente?.conta?.limite}}</p>
+            </li>
+            <li class="list-group-item">
+              <p><b>Data de abertura: </b>{{cliente?.conta?.dataCriacao | date:"dd/MM/yyyy HH:mm"}}</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-4">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <p><b>Estado: </b>{{cliente?.endereco?.estado}}</p>
+            </li>
+            <li class="list-group-item">
+              <p><b>Cidade: </b>{{cliente?.endereco?.cidade}}</p>
+            </li>
+            <li class="list-group-item">
+              <p><b>CEP: </b>{{cliente?.endereco?.cep}}</p>
+            </li>
+            <li class="list-group-item">
+              <p><b>Logradouro: </b>{{cliente?.endereco?.logradouro}}</p>
+            </li>
+            <li class="list-group-item">
+              <p><b>Nº: </b>{{cliente?.endereco?.numero}}</p>
+            </li>
+            <li class="list-group-item">
+              <p><b>Tipo: </b>{{cliente?.endereco?.tipo}}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

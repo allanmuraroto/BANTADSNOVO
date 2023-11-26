@@ -1,0 +1,41 @@
+<div class="modal-header">
+  <h5 class="modal-title">Efetuar deposito</h5>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" (click)="activeModal.dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="registration-form">
+    <h4></h4>
+    <section>
+      <form #formTransf="ngForm">
+        <div class="form-group">
+
+          <input type="number" min="1" class="form-control item" id="valor" name="valor" [(ngModel)]="valor"
+            #Valor="ngModel" placeholder="Valor" [required]="true">
+          <div [hidden]="!Valor.errors?.['min']">
+            o valor precisa ser maior que R$ 0
+          </div>
+          <div [hidden]="!Valor.errors?.['required']">
+            Valor invalido
+          </div>
+        </div>
+        <div class="form-group mt-2">
+          <input type="text" class="form-control item" id="destino" name="destino" [required]="true" [minlength]="9"
+            [(ngModel)]="destino" #Destino="ngModel" placeholder="Conta-destino">
+        </div>
+        <div [hidden]="!Destino.errors?.['minlength']">
+          Conta invalida
+        </div>
+        <div [hidden]="!Destino.errors?.['required']">
+          Valor invalido
+        </div>
+      </form>
+    </section>
+  </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-primary" (click)="trasnferir()">Transferir</button>
+  <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="activeModal.close()">
+    Cancelar</button>
+</div>

@@ -1,0 +1,15 @@
+com/bantads/clientes/ClientesApplication.class
+com/bantads/clientes/AtualizarClienteDTO$AtualizarClienteDTOBuilder.class
+com/bantads/clientes/ClientesService.class
+com/bantads/clientes/ClientesController.class
+com/bantads/clientes/ClienteRepository.class
+com/bantads/clientes/Cliente$ClienteBuilder.class
+com/bantads/clientes/CriarClienteDTO.class
+com/bantads/clientes/events/EventsHandler.class
+com/bantads/clientes/Cliente.class
+com/bantads/clientes/events/EventsConfig.class
+com/bantads/clientes/Endereco.class
+com/bantads/clientes/AtualizarClienteDTO.class
+com/bantads/clientes/Endereco$EnderecoBuilder.class
+com/bantads/clientes/events/RemoverClienteEvent.class
+com/bantads/clientes/events/CriarClienteEvent.class

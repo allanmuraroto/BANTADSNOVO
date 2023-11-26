@@ -1,0 +1,12 @@
+/app/src/main/java/com/bantads/clientes/events/EventsConfig.java
+/app/src/main/java/com/bantads/clientes/ClientesService.java
+/app/src/main/java/com/bantads/clientes/ClientesController.java
+/app/src/main/java/com/bantads/clientes/CriarClienteDTO.java
+/app/src/main/java/com/bantads/clientes/AtualizarClienteDTO.java
+/app/src/main/java/com/bantads/clientes/ClienteRepository.java
+/app/src/main/java/com/bantads/clientes/ClientesApplication.java
+/app/src/main/java/com/bantads/clientes/events/EventsHandler.java
+/app/src/main/java/com/bantads/clientes/events/RemoverClienteEvent.java
+/app/src/main/java/com/bantads/clientes/Endereco.java
+/app/src/main/java/com/bantads/clientes/events/CriarClienteEvent.java
+/app/src/main/java/com/bantads/clientes/Cliente.java

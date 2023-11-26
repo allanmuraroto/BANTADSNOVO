@@ -1,0 +1,65 @@
+<div class="modal-header">
+  <h5 class="modal-title">Extratos</h5>
+  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar" (click)="activeModal.dismiss()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="registration-form">
+    <h4></h4>
+    <section>
+      <form #formDate="ngForm">
+        <div class="form-group">
+
+          <input type="date" class="form-control item" min="min" id="inicio" name="inicio" [(ngModel)]="inicio"
+            #Inicio="ngModel" placeholder="inicio" [required]="true">
+          <div [hidden]="!Inicio.errors?.['min']">
+            o inicio precisa ser maior que R$ 0
+          </div>
+          <div [hidden]="!Inicio.errors?.['required']">
+            inicio invalido
+          </div>
+        </div>
+        <div class="form-group mt-2">
+          <input type="date" class="form-control item" min="inicio" id="fim" name="fim" [(ngModel)]="fim" #Fim="ngModel"
+            placeholder="Conta-fim">
+        </div>
+        <div [hidden]="!Fim.errors?.['min']">
+          fim invalido
+        </div>
+        <div [hidden]="!Fim.errors?.['required']">
+          inicio invalido
+        </div>
+      </form>
+    </section>
+  </div>
+  <table *ngIf="pesquisado == true" class="table">
+    <thead>
+      <tr>
+        <th scope="col">Data</th>
+        <th scope="col">Hora</th>
+        <th scope="col">tipo</th>
+        <th scope="col">Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let extrato of extratos">
+        <td>{{ extrato.dataMovimento | date: 'dd/MM/yyyy'}}</td>
+        <td>{{ extrato.dataMovimento | date: 'hh:mm'}}</td>
+        <td>
+          {{extrato.tipoMovimento}}
+
+          <p *ngIf="extrato.tipoMovimento == 'TRANSFERENCIA'">Origem: {{extrato.contaOrigem.id}} </p>
+          <p *ngIf="extrato.tipoMovimento == 'TRANSFERENCIA'">Destino: {{extrato.contaDestino.id}} </p>
+        </td>
+        <td>R$ {{(extrato.valor).toFixed(2)}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-success" data-dismiss="modal" (click)="buscar()">
+    Enviar</button>
+  <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="activeModal.close()">
+    Sair</button>
+</div>

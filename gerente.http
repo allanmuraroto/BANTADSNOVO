@@ -1,0 +1,31 @@
+# @name login
+# 
+POST http://localhost:3000/api/v1/logar
+Content-Type: application/json; charset=utf-8
+
+{
+    "email": "gerente-25921628783@gmail.com",
+    "senha": "102030"
+}
+
+###
+
+#
+GET http://localhost:3000/api/v1/contas/pendentes
+Content-Type: application/json; charset=utf-8
+Authorization: {{login.response.body.token}}
+
+
+###
+
+#
+GET http://localhost:3000/api/v1/me
+Content-Type: application/json; charset=utf-8
+Authorization: {{login.response.body.token}}
+
+###
+
+#
+GET http://localhost:3000/api/v1/clientes
+Content-Type: application/json; charset=utf-8
+Authorization: {{login.response.body.token}}

@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="container">
+    <h1>Solicitações de Cadastro</h1>
+    <div class="client-list text-center mx-auto col-md-10">
+      <table class="mt-5">
+        <thead>
+          <tr>
+            <th scope="col">CPF</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Salário</th>
+            <th scope="col">Ações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of clientes">
+            <td>{{item.cpf}}</td>
+            <td>{{item.nome}}</td>
+            <td>{{item.salario}}</td>
+            <td>
+              <button type="button" class="btn btn-success" (click)="abrirModal(1,item.conta?.id)">
+                Aprovar <i class="fa fa-check" aria-hidden="true"></i>
+              </button>
+              <button type="button" class="btn btn-danger" (click)="abrirModal(2,item.conta?.id)">
+                Recusar <i class="fa fa-ban" aria-hidden="true"></i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="container" style="margin-top: 40px; width: 800px">
+  <div class="d-flex flex-column gap-5 justify-center">
+    <div class="d-flex justify-content-between">
+      <h2 style="display: inline">Lista de gerentes</h2>
+      <div class="d-flex justify-content-end">
+        <button [routerLink]="'/admin/gerente'" type="button" class="btn btn-success">
+          Criar gerente <i class="fa fa-plus" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <table class="table" style="text-align: center">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">nome</th>
+          <th scope="col">CPF</th>
+          <th scope="col">email</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of items">
+          <td>{{ item.nome }}</td>
+          <td>{{ item.cpf }}</td>
+          <td>{{ item.email }}</td>
+          <td class="d-flex justify-content-end gap-2" style="min-width: max-content">
+            <button [routerLink]="'/admin/gerente/' + item.cpf" type="button" class="btn btn-primary">
+              Editar <i class="fa fa-pen" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="btn btn-danger" (click)="abrirModalRemoverGerente(item)">
+              Remover <i class="fa fa-ban" aria-hidden="true"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

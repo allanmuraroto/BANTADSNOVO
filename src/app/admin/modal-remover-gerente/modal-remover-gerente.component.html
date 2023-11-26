@@ -1,0 +1,12 @@
+<div class="modal-header">
+  <h5 class="modal-title">Remover gerente</h5>
+</div>
+<div class="modal-body">
+  <h4>Tem certeza que deseja remover o gerente {{gerente.nome}}?</h4>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-secondary" label="teste" data-dismiss="modal" (click)="activeModal.close()">
+      Fechar
+  </button>
+  <button type="button" class="btn btn-danger" (click)="removerGerente()">Remover</button>
+</div>

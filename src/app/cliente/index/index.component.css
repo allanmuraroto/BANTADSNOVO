@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+}
+
+.client {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.client_options {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    padding: 0;
+    box-shadow: 0px 0px 30px 0px #abd399;
+}
+
+.options {
+    text-decoration: none;
+    cursor: pointer;
+    padding: 1rem 0;
+    text-align: center;
+    color: #000;
+}
+
+.title {
+    background-color: #35427a;
+    color: #FFF;
+}

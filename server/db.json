@@ -1,0 +1,75 @@
+{
+    "usuarios": [
+        {
+        "id" : 1,
+        "nome": "pagoto",
+        "email" : "pagoto@gmail.com",
+        "senha" : "123456",
+        "cpf" : "15487956877",
+        "Endereco" : {
+          "tipo" : "avenida",
+          "logradouro": "mercadinho hue",
+           "cep": "83606-548",
+           "complemento":"barraca do ze",
+           "numero": "145",
+           "cidade": "Curitiba",
+           "estado": "PR"
+        },
+        "salario": 5000,
+        "nivel" : "cliente"
+        },
+        {
+            "id" : 2,
+            "nome": "jackson",
+            "email" : "jackson@gmail.com",
+            "senha" : "123456",
+            "cpf" : "12547895699",
+            "Endereco" : {
+              "tipo" : "avenida",
+              "logradouro": "mercadinho hue",
+               "cep": "83606-548",
+               "complemento":"barraca do ze",
+               "numero": "145",
+               "cidade": "CURITIBA",
+               "estado": "PR"
+            },
+            "salario": 5000,
+            "nivel" : "gerente"
+        },
+        {
+            "id" : 3,
+            "nome": "yuri",
+            "email" : "yuri@gmail.com",
+            "senha" : "123456",
+            "cpf" : "03757195396",
+            "Endereco" : {
+              "tipo" : "avenida",
+              "logradouro": "mercadinho hue",
+               "cep": "83606-548",
+               "complemento":"barraca do ze",
+               "numero": "145",
+               "cidade": "CURITIBA",
+               "estado": "PR"
+            },
+            "salario": 5000,
+            "nivel" : "administrador"
+        }
+    ],
+    "estados" : [
+      {
+        "Sigla" : "PR",
+        "Cidades" : [
+          "Curitiba",
+          "Campo Largo",
+          "Ponta Grossa"
+        ]
+      },
+      {
+        "Sigla" : "SP",
+        "Cidades" : [
+          "Rio Preto",
+          "São Paulo"
+        ]
+      }
+    ]
+}

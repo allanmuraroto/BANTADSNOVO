@@ -1,0 +1,12 @@
+/app/src/main/java/com/bantads/gerentes/GerentesService.java
+/app/src/main/java/com/bantads/gerentes/EventDispatcher.java
+/app/src/main/java/com/bantads/gerentes/GerentesEventsConfig.java
+/app/src/main/java/com/bantads/gerentes/CriarGerenteDTO.java
+/app/src/main/java/com/bantads/gerentes/UnstoreGerenteDTO.java
+/app/src/main/java/com/bantads/gerentes/StoreGerenteDTO.java
+/app/src/main/java/com/bantads/gerentes/GerentesApplication.java
+/app/src/main/java/com/bantads/gerentes/GerenteRepository.java
+/app/src/main/java/com/bantads/gerentes/Gerente.java
+/app/src/main/java/com/bantads/gerentes/AtualizarGerenteDTO.java
+/app/src/main/java/com/bantads/gerentes/GerentesController.java
+/app/src/main/java/com/bantads/gerentes/GerentesEventsHandler.java
