@@ -1,13 +1,6 @@
-ul.space li{
-    margin-left:10px !important; 
-    margin-right:10px !important; 
-}
 
-.navbar {
-    background-color: #35427a;
-}
+router-outlet{
 
-.navbar a {
-    text-decoration: none;
-    color: #fff;
+  background-color:  #88c3b5;
+  /* background-color: linear-gradient(#d0dccb, #88c3b5); */
 }

@@ -1,0 +1,29 @@
+<app-header-conta></app-header-conta>
+
+<div class="box">
+    <div class="account-info bg-light text-black row">
+        <input [ngModel]="conta" hidden>
+        <app-conta-info [conta]="conta" class="col-md-6"/>
+        <div class="col-md-6 child-div">
+            <h2 class="title">Depósito</h2>
+            <form id="depositoForm" method="post">
+                <div class="form-group">
+                    <label for="valorDeposito">Valor para depósito:</label>
+                    <input step="10" #valorDeposito id="valorDeposito" class="form-control" (keyup)="depositar(valorDeposito.value)" 
+                        name="valorDeposito" id="valorDeposito" type="number" placeholder="Ex: 50..." required/>
+                </div>
+                <div class="form-group">
+                    <label for="novoSaldo">Saldo disponível após a operação:</label>
+                    <span name="novoSaldo"  [style.color]="corSaldo"> R$ {{saldo}},00</span>
+                </div>
+                <div class="form-group">
+                    <label for="novoLimite">Limite disponível após a operação:</label>
+                    <span name="novoLimite"> R$ {{limite}},00</span>
+                </div>
+                <div class="form-group">
+                    <input id="btn-depositar" type="button" (click)="confirmDeposit(valorDeposito.value)" class="btn btn-primary" value="Depositar">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

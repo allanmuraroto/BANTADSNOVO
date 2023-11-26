@@ -1,0 +1,47 @@
+header {
+    position: relative;
+    z-index: 999;
+    background-color: white;
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.1rem;
+    list-style-type: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: .4s;
+    color: black;
+}
+
+.nav-links a:hover {
+    color: #f86300;
+}
+
+.link-esq {
+    margin-right: auto;
+}
+
+.link-dir {
+    margin-left: auto;
+}
+
+.link-esq, .link-dir {
+    font-size: 1.2rem;
+}
+
+.link-dir button {
+    background: none;
+    
+}
+
+
+

@@ -1,0 +1,14 @@
+.container__transferencia {
+    display: flex;
+    justify-content: center;
+}
+
+.transferencia {
+    width: 70vw;
+}
+
+.transferencia__btn {
+    background-color: green;
+    border: none;
+    margin-top: 12px;
+}

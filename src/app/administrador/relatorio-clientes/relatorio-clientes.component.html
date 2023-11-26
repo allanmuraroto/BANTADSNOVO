@@ -1,0 +1,47 @@
+<app-administrador-header></app-administrador-header>
+<div class="container-fluid">
+    <div class="row">
+        <nav id="sidebarMenu"
+            class="area-logada__sidebar administradorcol-md-3 col-lg-2 d-md-block bg-body-tertiary sidebar collapse">
+            <div class="position-sticky pt-3 sidebar-sticky">
+            </div>
+        </nav>
+    </div>
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="container mt-5">
+            <h1>Relatório de clientes</h1>
+
+            <section class="container">
+                <div class="row">
+                    <div class="saldo__table col-md-9">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="text-center" scope="col">Cliente</th>
+                                    <th class="text-center" scope="col">CPF</th>
+                                    <th class="text-center" scope="col">Limite</th>
+                                    <th class="text-center" scope="col">Gerente</th>
+                                    <th class="text-center" scope="col">Saldo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let cliente of clientes">
+                                    <td class="col-3 text-center">{{cliente.cliente}}</td>
+                                    <td class="col-3 text-center">{{cliente.CPF}}</td>
+                                    <td class="col-3 text-center">{{cliente.limite}}</td>
+                                    <td class="col-3 text-center">{{cliente.gerente}}</td>
+                                    <td class="col-3 text-center">{{cliente.saldo}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-md-12 saldo__btn">
+                    <button class="btn btn-primary" (click)="gerarPDF()">
+                        <i class="fa-solid fa-download"></i>Baixar em PDF</button>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>

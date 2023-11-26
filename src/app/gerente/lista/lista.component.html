@@ -1,0 +1,25 @@
+<app-gerente-header></app-gerente-header>
+<div class="container mt-5">
+    <h1 class="text-center">Solicitações de Cadastro</h1>
+    <table class="mt-5">
+        <thead>
+            <tr>
+                <th class="w-25">CPF</th>
+                <th>Nome</th>
+                <th>Salário</th>
+                <th class="text-center w-25">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="row-tbody" *ngFor="let cliente of clientes">
+                <td class="field-cpf">{{cliente.cpf}}</td>
+                <td class="field-nome">{{cliente.nome}}</td>
+                <td class="field-salario">R${{cliente.salario}}</td>
+                <td class="text-center field-acao">
+                    <a (click)="aprovar($event)" style="width: 7rem; margin-right: .3rem;" class="btn nova-peca acao-editar" href="/gerente">Aprovar</a>
+                    <a (click)="recusar($event)" style="width: 7rem;" class="btn btn-danger acao-excluir" href="/gerente">Recusar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

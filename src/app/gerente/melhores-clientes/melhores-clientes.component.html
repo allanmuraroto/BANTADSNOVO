@@ -1,29 +1,24 @@
-<div class="container-fluid mt-5">
-  <div class="container">
-    <h1>Melhores Clientes</h1>
-    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
-      <thead>
-        <tr>
-          <th>CPF</th>
-          <th>Nome</th>
-          <th>E-mail</th>
-          <th>Salário</th>
-          <th>Saldo</th>
-          <th>Cidade</th>
-          <th>Estado</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let person of clientes">
-          <td>{{ person.cpf }}</td>
-          <td>{{ person.nome }}</td>
-          <td>{{ person.email }}</td>
-          <td>R$ {{ person.salario }}</td>
-          <td>R$ {{ person.conta?.saldo }}</td>
-          <td>{{ person.endereco?.cidade }}</td>
-          <td>{{ person.endereco?.estado }}</td>
-        </tr>
-      </tbody>
+<app-gerente-header></app-gerente-header>
+<div class="container mt-5">
+    <h1 class="text-center">Melhores Clientes</h1>
+    <table class="mt-5">
+        <thead>
+            <tr>
+                <th class="w-25">Nome</th>
+                <th>CPF</th>
+                <th>Cidade</th>
+                <th>Estado</th>
+                <th>saldo</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="row-tbody" *ngFor="let cliente of clientes">
+                <td class="field-cpf">{{cliente.nome}}</td>
+                <td class="field-nome">{{cliente.cpf}}</td>
+                <td class="field-nome">{{cliente.cidade}}</td>
+                <td class="field-nome">{{cliente.estado}}</td>
+                <td class="field-salario">R${{cliente.saldo}}</td>
+            </tr>
+        </tbody>
     </table>
-  </div>
 </div>

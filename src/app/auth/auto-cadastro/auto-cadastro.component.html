@@ -1,0 +1,104 @@
+<div class="container">
+    <h1 class="title">BANTADS</h1>
+    <img src="assets/img/banking2.gif" width="300">
+    <form #formCadastro="ngForm">
+        <div class="row col-md-12">
+            <div class="form-group col-md-3">
+                <label for="inputCpf">CPF</label>
+                <input type="text" class="form-control" id="cpf" name="cpf" [(ngModel)]="cliente.cpf" #cpf="ngModel" mask="000.000.000-00" placeholder="000.000.000-00" maxlength="11" minlength="11" required />
+                <div *ngIf="cpf.errors && (cpf.dirty || cpf.touched)" class="alert alert-danger">
+                    <div [hidden]="!cpf.errors['required']">Digite o CPF.</div>
+                    <div [hidden]="!cpf.errors['minlength']">
+                      O CPF deve conter ao menos 11 caracteres.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputNome">Nome</label>
+                <input type="text" class="form-control" id="nome" name="nome" [(ngModel)]="cliente.nome" #nome="ngModel" placeholder="Digite seu nome" required />
+                <div *ngIf="nome.errors && (nome.dirty || nome.touched)" class="alert alert-danger">
+                    <div [hidden]="!nome.errors['required']">Digite o nome.</div>
+                    <div [hidden]="!nome.errors['minlength']">
+                      O nome deve conter ao menos 2 caracteres.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputTelefone">Telefone</label>
+                <input type="text" class="form-control" id="telefone" name="telefone" [(ngModel)]="cliente.telefone" #telefone="ngModel" placeholder="XX XXXXX-XXXX" minlength="11" maxlength="13" required/>
+                <div *ngIf="telefone.errors && (telefone.dirty || telefone.touched)" class="alert alert-danger">
+                    <div [hidden]="!telefone.errors['required']">Digite o telefone.</div>
+                    <div [hidden]="!telefone.errors['minlength']">
+                        O telefone deve conter ao menos 11 caracteres.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="form-group col-md-4">
+                <label for="inputEmail">Email</label>
+                <input type="email" class="form-control" id="email" name="email" [(ngModel)]="cliente.email" #email="ngModel" placeholder="fulano@email.com" required/>
+                <div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger">
+                    <div [hidden]="!email.errors['required']">Digite o email.</div>
+                </div>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputSalario">Salário</label>
+                <input type="number" class="form-control" id="salario" name="salario" [(ngModel)]="cliente.salario" #salario="ngModel" placeholder="R$ 0000.00,00" required/>
+                <div *ngIf="salario.errors && (salario.dirty || salario.touched)" class="alert alert-danger">
+                    <div [hidden]="!salario.errors['required']">Digite o salário.</div>
+                </div>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputCEP">CEP</label>
+                <input type="text" class="form-control" id="cep" name="cep" [(ngModel)]="endereco.cep" #cep="ngModel" mask='00000-000' placeholder="000000-000" minlength="8" maxlength="8" required />
+                <div *ngIf="cep.errors && (cep.dirty || cep.touched)" class="alert alert-danger">
+                    <div [hidden]="!cep.errors['required']">Digite o CEP.</div>
+                    <div [hidden]="!cep.errors['minlength']">
+                        O CEP deve conter ao menos 8 caracteres.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputEstado">Estado</label>
+                <input type="text" class="form-control" id="estado" name="estado" [(ngModel)]="endereco.estado" #estado="ngModel" placeholder="PR" minlength="2" required />
+                <div *ngIf="estado.errors && (estado.dirty || estado.touched)" class="alert alert-danger">
+                    <div [hidden]="!estado.errors['required']">Digite o estado.</div>
+                  </div>
+            </div>
+        </div>
+        <div class="row col-md-12">
+            <div class="form-group col-md-4">
+                <label for="inputAddress">Rua</label>
+                <input type="text" class="form-control" id="rua" name="rua" [(ngModel)]="endereco.logradouro" #logradouro="ngModel" placeholder="Av Vinicius de Morais, 25" required/>
+                <div *ngIf="logradouro.errors && (logradouro.dirty || logradouro.touched)" class="alert alert-danger">
+                    <div [hidden]="!logradouro.errors['required']">Digite o tipo do endereço</div>
+                </div>              
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputAddress2">Bairro</label>
+                <input type="text" class="form-control" id="rua" name="rua" [(ngModel)]="endereco.bairro" #bairro="ngModel" minlength="3" maxlength="20" placeholder="Av Vinicius de Morais, 25" required/>
+                <div *ngIf="bairro.errors && (bairro.dirty || bairro.touched)" class="alert alert-danger">
+                    <div [hidden]="!bairro.errors['required']">Digite o bairro.</div>
+                </div>        
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputEstado">Número</label>
+                <input type="number" class="form-control" id="numero" name="numero" [(ngModel)]="endereco.numero" #numero="ngModel" placeholder="00" required />
+                <div *ngIf="numero.errors && (numero.dirty || numero.touched)" class="alert alert-danger">
+                    <div [hidden]="!numero.errors['required']">Digite o número.</div>
+                </div>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputCidade">Cidade</label>
+                <input type="text" class="form-control" id="cidade" name="cidade" [(ngModel)]="endereco.cidade" #cidade="ngModel" minlength="2" maxlength="20" placeholder="Cidade da Alegria" required />
+                <div *ngIf="cidade.errors && (cidade.dirty || cidade.touched)" class="alert alert-danger">
+                    <div [hidden]="!cidade.errors['required']">Digite a cidade.</div>
+                </div>
+            </div>
+        </div>
+        <div class="register">
+            <button type="submit" class="btn btn-primary" routerLink="/gerente/lista" (click)="autoCadastro()">Cadastrar</button>
+        </div>
+    </form>
+</div>

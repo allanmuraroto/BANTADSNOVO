@@ -1,0 +1,35 @@
+<!--
+<section class="container__transferencia">
+  <form class="transferencia">
+    <div class="mb-3">
+      <label for="exampleConta" class="form-label">Conta Corrente Destinatário</label>
+      <input type="number" class="form-control" id="exampleConta" aria-describedby="Conta" [(ngModel)]="accountNumber">
+    </div>
+    <div class="input-group mb-3">
+      <span class="input-group-text">$</span>
+      <span class="input-group-text">0.00</span>
+      <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)"  [(ngModel)]="transferAmount">
+    </div>
+    <button type="submit" class="transferencia__btn btn btn-primary">Transferir</button>
+  </form>
+</section
+-->
+<app-header-conta></app-header-conta>
+
+
+<section  class="container__transferencia" style="background-color: rgb(201, 208, 218);width:70%;margin-left: 15%;margin-top: 50px; padding: 20px;">
+    <div class="row transferencia">
+      <div class="col-12">
+        <label for="account-number-input">Número da Conta:</label>
+        <input class="form-control" type="text" id="account-number-input" [(ngModel)]="accountNumber">
+      </div>
+      <div class="col-12">
+        <label for="transfer-amount-input">Valor da Transferência:</label>
+        <input class="form-control" type="number" id="transfer-amount-input" [(ngModel)]="transferAmount">
+      </div>
+      <div class="col-12">
+        <button class="transferencia__btn btn btn-primary" (click)="transfer()">Transferir</button>
+      </div>
+    </div>
+  </section>
+  

@@ -1,72 +1,43 @@
-<div>
-  <div class="search-container-cpf">
-    <h1>Consultar Cliente</h1>
-    <form #formSearch="ngForm" class="input-search">
-      <input type="text" placeholder="Digite o CPF" id="cpf" name="cpf" [(ngModel)]="cpf"
-        data-inputmask="'mask': '99999999999'">
-      <button type="submit" (click)="buscaClientePorCPF()">Buscar</button>
-    </form>
-
-    <div class="row justify-content-md-center client-data">
-      <div *ngIf="consultado == true" class="row">
-        <div class="col-4">
-          <ul class="list-group">
-            <li class="list-group-item">
-              <p><b>Nome: </b>{{cliente?.nome}}</p>
-            </li>
-            <li class="list-group-item">
-              <p><b>CPF: </b>{{cliente?.cpf}}</p>
-            </li>
-            <li class="list-group-item">
-              <p><b>E-mail: </b>{{cliente?.email}}</p>
-            </li>
-            <li class="list-group-item">
-              <p><b>Salário: </b>R$: {{cliente?.salario}}</p>
-            </li>
-          </ul>
-        </div>
-        <div class="col-4">
-          <ul class="list-group">
-            <li class="list-group-item">
-              <p><b>Número da conta: </b>{{cliente?.conta?.id}}</p>
-            </li>
-            <li class="list-group-item">
-              <p><b>Saldo: </b>R$: {{cliente?.conta?.saldo}}</p>
-            </li>
-            <li class="list-group-item">
-              <p><b>Status: </b>{{cliente?.conta?.status}}</p>
-            </li>
-            <li class="list-group-item">
-              <p><b>Limite: </b> R$: {{cliente?.conta?.limite}}</p>
-            </li>
-            <li class="list-group-item">
-              <p><b>Data de abertura: </b>{{cliente?.conta?.dataCriacao | date:"dd/MM/yyyy HH:mm"}}</p>
-            </li>
-          </ul>
-        </div>
-        <div class="col-4">
-          <ul class="list-group">
-            <li class="list-group-item">
-              <p><b>Estado: </b>{{cliente?.endereco?.estado}}</p>
-            </li>
-            <li class="list-group-item">
-              <p><b>Cidade: </b>{{cliente?.endereco?.cidade}}</p>
-            </li>
-            <li class="list-group-item">
-              <p><b>CEP: </b>{{cliente?.endereco?.cep}}</p>
-            </li>
-            <li class="list-group-item">
-              <p><b>Logradouro: </b>{{cliente?.endereco?.logradouro}}</p>
-            </li>
-            <li class="list-group-item">
-              <p><b>Nº: </b>{{cliente?.endereco?.numero}}</p>
-            </li>
-            <li class="list-group-item">
-              <p><b>Tipo: </b>{{cliente?.endereco?.tipo}}</p>
-            </li>
-          </ul>
-        </div>
-      </div>
+<app-gerente-header></app-gerente-header>
+<div class="container-fluid">
+    <div class="row">
+        <nav id="sidebarMenu"
+            class="area-logada__sidebar col-md-3 col-lg-2 d-md-block bg-body-tertiary sidebar collapse">
+            <div class="position-sticky pt-3 sidebar-sticky">
+                <app-sidebar></app-sidebar>
+            </div>
+        </nav>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+            <section class="consultar-cliente">
+                <div class="consultar-cliente__header">
+                    <h2>Consultar Cliente</h2>
+                    <label class="form-label">Digite o número do CPF:</label>
+                    <input class="form-control" type="text" [(ngModel)]="cpf">
+                </div>
+                <table class="table consultar-cliente__table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Número do CPF</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Conta</th>
+                            <th scope="col">Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of items" [hidden]="item.cpf !== cpf">
+                            <td>{{item.cpf}}</td>
+                            <td>{{item.nome}}</td>
+                            <td>{{item.valor}}</td>
+                            <td>
+                                <button routerLink="/consultar-cliente" type="button"
+                                    class="btn btn-primary">Ver</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
     </div>
-  </div>
 </div>
+
+<app-footer></app-footer>

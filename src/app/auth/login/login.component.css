@@ -1,47 +1,23 @@
-body{
-    background-color: #dee9ff;
-}
-
-.form-login {
-	padding: 50px 0;
-}
-
-.form-login form{
-    background-color: #fff;
-    max-width: 600px;
-    margin: auto;
-    padding: 50px 70px;
-    border-radius: 30px;
-    box-shadow: 0px 0px 30px 0px #abd399;
-}
-
 .image {
+    max-width: 100%;
+    max-height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;  
 }
 
-.form-login .item {
-	border-radius: 0.5rem;
-    margin-bottom: 25px;
-    padding: 10px 20px;
-}
-
-.form-login .create-account {
-    padding: 10px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    background-color: #5791ff;
-    border: none;
-    color: #FFFFFF;
-}
-
-.button {
-    display: flex;
+.container {
     justify-content: center;
+    width: 350px;
+    height: 550px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 30px 0px #abd399;
+    margin-top: 30px;
 }
 
-.link { 
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
+legend {
+    margin-top: 15px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 35px;
 }

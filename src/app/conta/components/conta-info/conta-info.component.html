@@ -1,0 +1,21 @@
+<!-- <app-header-conta></app-header-conta> -->
+<div>
+    <div class="row">
+        <div style="width:70%; margin-left: 15%;margin-top: 50px; border-radius:10px;padding:20px;background-color: rgb(201, 208, 218);">
+            <h2 class="title">Informações da conta</h2>
+            <h3>Dados da conta</h3>
+            <label for="contaNumero">Número:</label>
+            <span name="contaNumero"> {{conta.numero}}</span><br>
+            <label for="contaSaldo">Saldo:</label>
+            <span name="contaSaldo" [style.color]="corSaldo"> R$ {{conta.saldo}},00</span><br>
+            <label for="contaLimite">Limite disponível (Limite + Saldo):</label>
+            <span name="contaLimite"> R$ {{conta.limite!}},00</span>
+            <h3>Dados do titular</h3>
+            <label for="clienteNome">Nome:</label>
+            <span name="clienteNome"> {{conta.cliente?.nome}}</span><br>
+            <label for="clienteCpf">CPF:</label>
+            <span name="clienteCpf"> {{conta.cliente?.cpf}}</span><br>
+        </div>
+    </div>
+    
+</div>

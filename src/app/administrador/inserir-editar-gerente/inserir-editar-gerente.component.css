@@ -1,0 +1,52 @@
+h1 {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #35427a;
+    margin: 5rem 0 3rem;
+}
+
+.form {
+    width: 50%;
+    margin-inline: auto;
+}
+
+input {
+    padding: 1rem;
+    margin-bottom: .5rem;
+    
+}
+
+label {
+    color: #35427a;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.form-btns {
+    text-align: center;
+}
+
+.form-btn {
+    border: none;
+    padding: .8rem;
+    width: 10rem;
+    cursor: pointer;
+    margin: 1rem;
+    border-radius: .5rem;
+    color: white;
+    transition: .1s ease-in-out;
+}
+
+.btn-voltar {
+    padding: .9rem 3rem;
+    background-color: rgb(192, 192, 192);
+}
+
+.btn-voltar:hover {
+    background-color: rgb(163, 163, 163);
+
+}
+
+.btn-salvar {
+    background-color: #35427a;
+}

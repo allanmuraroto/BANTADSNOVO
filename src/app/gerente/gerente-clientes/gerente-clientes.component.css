@@ -1,0 +1,89 @@
+h1 {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #35427a;
+    margin: 5rem 0 1rem;
+}
+
+.searchbar {
+    height: 60px;
+    background-color: #35427afa;
+    border-radius: .2rem;
+    padding: 10px;
+}
+
+.search_input {
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color: transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+}
+
+.searchbar:hover>.search_input {
+    padding: 0 10px;
+    width: 300px;
+    caret-color: white;
+    transition: width 0.4s linear;
+}
+
+.search_icon {
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+th,
+td {
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
+
+td {
+    color: #35427a;
+}
+
+th {
+    text-align: left;
+}
+
+thead th {
+    background-color: #35427a;
+}
+
+
+tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+tbody td {
+    position: relative;
+}
+
+.field-nome a {
+    color: #008fc7;
+    text-decoration: none;
+    
+    font-weight: 600;
+}
+
+.field-nome a:hover {
+    color: #00b7ff;
+}

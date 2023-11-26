@@ -1,0 +1,1 @@
+export * from './administrador-inicial.component';
