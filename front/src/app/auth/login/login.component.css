@@ -1,57 +1,63 @@
-body{
-    background-color: #dee9ff;
+/* Estilo retro para body */
+
+body {
+    background-color: #f0f0f0; /* Cor de fundo retro */
+    font-family: Arial, sans-serif; /* Fonte retro */
+    margin: 0;
+    padding: 0;
 }
 
-.registration-form{
-	padding: 50px 0;
+/* Estilo retro para .registration-form */
+
+.registration-form {
+    padding: 50px 0;
+    text-align: center;
 }
 
-.registration-form form{
+.registration-form form {
     background-color: #fff;
     max-width: 600px;
     margin: auto;
-    padding: 50px 70px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
+    padding: 50px;
+    border-radius: 20px; /* Arredonde as bordas para um estilo mais suave */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Sombra retro */
 }
 
-.registration-form .form-icon{
-	text-align: center;
-    background-color: #5891ff;
+.registration-form .form-icon {
+    text-align: center;
+    background-color: #5791ff; /* Cor de destaque retro */
     border-radius: 50%;
-    font-size: 40px;
+    font-size: 50px; /* Tamanho do ícone retro */
     color: white;
     width: 100px;
     height: 100px;
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     line-height: 100px;
 }
 
-.registration-form .item{
-	border-radius: 20px;
-    margin-bottom: 25px;
+.registration-form .item {
+    border-radius: 10px; /* Arredonde as bordas dos itens */
+    margin-bottom: 20px;
     padding: 10px 20px;
 }
 
-.registration-form .create-account{
-    border-radius: 30px;
+.registration-form .create-account {
+    border-radius: 20px;
     padding: 10px 20px;
     font-size: 18px;
     font-weight: bold;
-    background-color: #5791ff;
+    background-color: #5791ff; /* Cor de destaque retro */
     border: none;
     color: white;
     margin-top: 20px;
+    cursor: pointer;
 }
 
-
-
-
+/* Estilo retro para dispositivos móveis */
 
 @media (max-width: 576px) {
-    .registration-form form{
+    .registration-form form {
         padding: 50px 20px;
     }
 }

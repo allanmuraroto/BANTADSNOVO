@@ -1,29 +1,38 @@
+/* Estilo retro para .search-container-cpf */
+
 .search-container-cpf {
-    float: left;
-    padding-bottom: 15px;
-    width: 100%;
-  }
+  float: left;
+  padding-bottom: 15px;
+  width: 100%;
+}
 
 .search-container-cpf button {
-    background: #ddd;
-    padding: 6px 10px;
-    margin-top: 8px;
-    margin-left: 2px;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
+  background: #999; /* Cor de fundo retro */
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-left: 2px;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  color: #fff; /* Cor do texto retro */
+  border-radius: 5px; /* Borda arredondada retro */
 }
 
 input[type=text] {
-    padding: 6px;
-    margin-top: 8px;
-    font-size: 17px;
-    border: none;
-
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+  background: #eee; /* Cor de fundo retro */
+  border-radius: 5px; /* Borda arredondada retro */
 }
+
 .list-group-item {
   border-style: none;
 }
-p{
+
+p {
   display: block;
+  font-size: 16px; /* Tamanho da fonte retro */
+  color: #333; /* Cor do texto retro */
 }

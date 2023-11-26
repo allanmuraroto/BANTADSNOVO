@@ -1,40 +1,47 @@
-.search-container-cpf {
-    float: left;
-    padding-bottom: 15px;
-  }
+/* Estilo retro alternativo para .wrimagecard */
 
-.search-container-cpf button {
-    background: #ddd;
-    padding: 6px 10px;
-    margin-top: 8px;
-    margin-left: 2px;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
+.wrimagecard {
+  margin-top: 20px; /* Margem superior aumentada */
+  margin-bottom: 20px; /* Margem inferior aumentada */
+  text-align: center; /* Centralizar o conteúdo de texto */
+  position: relative;
+  background: #dcdcdc; /* Cor de fundo retro mais escura */
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.3); /* Sombra retro mais destacada */
+  border-radius: 15px; /* Arredonde as bordas para um estilo mais suave */
+  transition: all 0.3s ease;
+  padding: 20px; /* Espaçamento interno retro */
 }
 
-.search-container-name {
-float: right;
-padding-bottom: 15px;
+.wrimagecard .fa-solid {
+  position: relative;
+  font-size: 60px; /* Tamanho do ícone retro ligeiramente maior */
+  color: #777; /* Cor do ícone retro mais escura */
 }
 
-.search-container-name button {
-float: right;
-padding: 6px 10px;
-margin-top: 8px;
-margin-right: 16px;
-background: #ddd;
-font-size: 17px;
-border: none;
-cursor: pointer;
+.wrimagecard-topimage_header {
+  padding: 10px 20px; /* Espaçamento interno do cabeçalho retro */
 }
 
-input[type=text] {
-    padding: 6px;
-    margin-top: 8px;
-    font-size: 17px;
-    border: none;
+a.wrimagecard:hover,
+.wrimagecard-topimage:hover {
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); /* Sutil sombra ao passar o mouse retro */
 }
-.tableStyle{
-  margin-top: 10px;
+
+.wrimagecard-topimage a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.wrimagecard-topimage_title {
+  padding: 10px 20px; /* Espaçamento interno do título retro */
+  height: auto; /* Altura automática do título */
+  position: relative;
+}
+
+.wrimagecard-topimage a {
+  border-bottom: 2px solid #777; /* Borda inferior sólida retro */
+  text-decoration: none;
+  color: #333; /* Cor do texto retro */
+  transition: color 0.3s ease;
 }
