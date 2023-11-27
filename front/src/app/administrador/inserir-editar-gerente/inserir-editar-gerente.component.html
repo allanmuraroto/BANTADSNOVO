@@ -1,0 +1,61 @@
+<app-administrador-header></app-administrador-header>
+<div class="container">
+    <h1 class="text-center" *ngIf="novoGerente">Novo Gerente</h1>
+    <h1 class="text-center" *ngIf="!novoGerente">Editar Gerente</h1>
+    <div class="well">
+        <form class="form" #formAdministrador="ngForm">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" class="form-control" [(ngModel)]="gerente.nome" #nome="ngModel"
+                    minlength="2" required>
+                <div *ngIf="nome.errors && (nome.dirty || nome.touched)" class="alert alert-danger">
+                    <div [hidden]="!nome.errors['required']">Digite o nome do gerente.</div>
+                    <div [hidden]="!nome.errors['minlength']">O nome do gerente deve conter ao menos 2 caracteres
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="novoGerente">
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" name="cpf" id="cpf" class="form-control" [(ngModel)]="gerente.cpf" #cpf="ngModel"
+                        minlength="2" required mask="000.000.000-00">
+                    <div *ngIf="cpf.errors && (cpf.dirty || cpf.touched)" class="alert alert-danger">
+                        <div [hidden]="!cpf.errors['required']">Digite o cpf do gerente.</div>
+                        <div [hidden]="!cpf.errors['minlength']">O cpf do gerente deve conter ao menos 2 caracteres
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" class="form-control" [(ngModel)]="gerente.email" #email="ngModel"
+                    minlength="2" required>
+                <div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger">
+                    <div [hidden]="!email.errors['required']">Digite o email do gerente.</div>
+                    <div [hidden]="!email.errors['minlength']">O email do gerente deve conter ao menos 2 caracteres
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" id="telefone" class="form-control" [(ngModel)]="gerente.telefone" #telefone="ngModel"
+                    minlength="2" required mask="(00) 00000-0000">
+                <div *ngIf="telefone.errors && (telefone.dirty || telefone.touched)" class="alert alert-danger">
+                    <div [hidden]="!telefone.errors['required']">Digite o telefone do gerente.</div>
+                    <div [hidden]="!telefone.errors['minlength']">O telefone do gerente deve conter ao menos 2 caracteres
+                    </div>
+                </div>
+            </div>
+            <div class="form-btns">
+                <button type="button" class="form-btn btn-salvar" (click)="salvar()" [disabled]="!formAdministrador.form.valid">
+                    <i *ngIf="!loading" class="fa fa-save" aria-hidden="true"></i> 
+                    <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span> Salvar
+                </button>
+                <a class="form-btn btn-voltar" [routerLink]="['/administrador']">
+                    <i class="fa fa-arrow-left" aria-hidden="true"></i> Voltar
+                </a>
+            </div>
+        </form>
+    </div>
+
+</div>

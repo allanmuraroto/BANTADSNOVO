@@ -1,10 +1,10 @@
 <div class="container-fluid">
   <div class="container">
-    <div style="width: 70%; padding-top: 40px; margin: 0 auto !important;float: none !important;">
-      <table class="table" style="text-align:center">
-        <thead class="thead-dark">
+    <h1>Solicitações de Cadastro</h1>
+    <div class="client-list text-center mx-auto col-md-10">
+      <table class="mt-5">
+        <thead>
           <tr>
-
             <th scope="col">CPF</th>
             <th scope="col">Nome</th>
             <th scope="col">Salário</th>
@@ -12,7 +12,6 @@
           </tr>
         </thead>
         <tbody>
-
           <tr *ngFor="let item of clientes">
             <td>{{item.cpf}}</td>
             <td>{{item.nome}}</td>
@@ -26,7 +25,6 @@
               </button>
             </td>
           </tr>
-
         </tbody>
       </table>
     </div>

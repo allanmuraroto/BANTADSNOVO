@@ -1,0 +1,35 @@
+<app-administrador-header></app-administrador-header>
+<div class="container">
+
+    <h1 class="text-center">Gerentes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>E-mail</th>
+                <th>Telefone</th>
+                <th class="text-center w-25">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let gerente of gerentes">
+                <td>{{gerente.nome}}</td>
+                <td>{{gerente.cpf}}</td>
+                <td>{{gerente.email}}</td>
+                <td>{{gerente.telefone}}</td>
+                <td class="text-center" style="width: 300px;">
+                    <a title="Editar" alt="Editar" style="width: 7rem; margin-right: .3rem;" class="btn nova-peca"
+                        [routerLink]="['/administrador/editar', gerente.id]">
+                        <i class="fa fa-edit" aria-hidden="true"></i> Editar
+                    </a>
+                    <a href="#" title="Remover" alt="Remover" style="width: 7rem;" class="btn btn-danger"
+                        (click)="remover($event,gerente)">
+                        <i class="fa fa-times" aria-hidden="true"></i> Remover
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p *ngIf="gerentes.length==0">Nenhum gerente cadastrado.</p>
+</div>

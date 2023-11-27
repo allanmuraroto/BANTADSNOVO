@@ -1,4 +1,6 @@
-ul.space li{
-    margin-left:10px !important; 
-    margin-right:10px !important; 
+
+router-outlet{
+
+  background-color:  #88c3b5;
+  /* background-color: linear-gradient(#d0dccb, #88c3b5); */
 }

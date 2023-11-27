@@ -1,0 +1,42 @@
+<app-header-conta></app-header-conta>
+
+<div class="container mt-5" style="margin-top:40px;">
+    <h1>Extrato da Conta - 0001 <br> {{conta.cliente?.nome}}</h1>
+    <form>
+        <div style="width: 40%;" class="row">
+            <div class="col">
+                <label for="dataInicial">Informe a data mínima:</label>
+                <input class="form-control" type="date" name="dataInicial" id="dataInicial">
+            </div>
+            <div class="col">
+                <label for="dataFinal">Informe a data máxima:</label>
+                <input class="form-control" type="date" name="dataFinal" id="dataFinal">
+            </div>
+        </div>
+        <div style="width: 38%;" class="row">
+            <button type="button" class="btn btn-primary">Filtrar</button>
+        </div>
+    </form>
+    <h3 style="margin-top: 30px;">Saldo Inicial: R$ {{conta.saldo}}</h3>
+    <table class="table mt-3" *ngFor="let dia of dias">
+        <thead>
+            <tr>
+                <th>Data/hora</th>
+                <th>Operação</th>
+                <th>Cliente Origem</th>
+                <th>Cliente Destino</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="row-tbody" *ngFor="let op of dia.extrato">
+                <td [style.color]="op.color">{{op.data}}</td>
+                <td [style.color]="op.color">{{op.operacao}}</td>
+                <td [style.color]="op.color">{{op.origem}}</td>
+                <td [style.color]="op.color">{{op.destino}}</td>
+                <td [style.color]="op.color">R$ {{op.valor}}</td>
+            </tr>
+        </tbody>
+        <caption style="color: black; font-size: 16;">Saldo consolidado: R$ {{dia.saldo}}</caption>
+    </table>
+</div>

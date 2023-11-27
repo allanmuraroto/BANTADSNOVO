@@ -16,9 +16,11 @@ export class ModalDepositoComponent implements OnInit {
   max: number = 0;
   constructor(public activeModal: NgbActiveModal, private clienteService: ClienteService) { }
   @ViewChild('formDeposito') formDeposito! : NgForm;
+  
   ngOnInit(): void {
     this.max = this.conta.saldo + this.conta.limite;
   }
+
   depositar(){
     if(this.formDeposito.form.valid){
       this.clienteService.depositar(this.valor).subscribe( (resp : Conta) => {

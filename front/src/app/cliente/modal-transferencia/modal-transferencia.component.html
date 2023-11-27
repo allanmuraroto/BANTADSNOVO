@@ -10,7 +10,6 @@
     <section>
       <form #formTransf="ngForm">
         <div class="form-group">
-
           <input type="number" min="1" class="form-control item" id="valor" name="valor" [(ngModel)]="valor"
             #Valor="ngModel" placeholder="Valor" [required]="true">
           <div [hidden]="!Valor.errors?.['min']">

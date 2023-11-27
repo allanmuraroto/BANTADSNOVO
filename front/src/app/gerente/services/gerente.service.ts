@@ -1,57 +1,64 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { AuthTokenService } from 'src/app/shared/auth-token.service';
-import { Conta } from 'src/app/shared/models/conta';
-import { Endereco } from 'src/app/shared/models/endereco.model';
-import { Usuario } from 'src/app/shared/models/usuario.model';
-
+import Swal from 'sweetalert2';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GerenteService {
-  constructor(private httpClient: HttpClient,private authTokenService:AuthTokenService ) { }
-  Base_Url = "http://localhost:3000";
 
-  httpOptions = {
-    headers: new HttpHeaders({
-      'Content-Type' : 'application/json',
-      'Authorization' : this.authTokenService.getToken()
-    })
-  };
+  constructor() { }
 
+  
 
-  getClientes() : Observable<Usuario[]> {
-    return this.httpClient.get<Usuario[]>(this.Base_Url +"/api/v1/clientes", this.httpOptions)
-   }
-
-   getClientesAjax(): Observable<Usuario[]>{
-     return this.httpClient.get<Usuario[]>(this.Base_Url +"/api/v1/contas/pendentes", this.httpOptions)
-   }
-
-   getClientesTop5(): Observable<Usuario[]>{
-    return this.httpClient.get<Usuario[]>(this.Base_Url +"/api/v1/clientes/conta/top5", this.httpOptions)
+  aprovar($event: any): void {
+    $event.preventDefault();
+    Swal.fire({
+      title: 'Deseja mesmo aprovar o autocadastro?',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Confirmar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.value) {
+        Swal.fire({
+          title: 'Autocadastro aprovado com sucesso. Um email com a senha foi enviado para o cliente!',
+          icon: 'success'
+        }).then(result => {
+          if (result.isConfirmed) {
+            $event.target.closest('tr').remove()
+          }
+        })
+      }
+    });
   }
 
-   contaAprovar(id : any){
-      let contaId:string = id;
+  recusar($event: any) : void {
+    $event.preventDefault();
+    Swal.fire({
+      title: 'Motivo da recusa',
+      input: 'text',
+      inputAttributes: {
+        autocapitalize: 'off'
+      },
+      showCancelButton: true,
+      confirmButtonText: 'Enviar',
+      cancelButtonText: 'Cancelar',
+      showLoaderOnConfirm: true,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire('Autocadastro recusado com sucesso. Um e-mail com o motivo foi enviado para o cliente!')
+        .then(result => {
+          if (result.isConfirmed) {
+            $event.target.closest('tr').remove()
+          }
+        })
+      }
+    })
 
-      this.httpClient.post<string>(this.Base_Url +"/api/v1/contas/pendentes/"+contaId+"/aprovar",{},this.httpOptions).subscribe( (resp => {
-        console.log(resp);
-      }));
+    
+  }
 
-   }
-   contaReprovar(id : any, motivo : any){
-    let contaId:string = id;
-    this.httpClient.post<string>(this.Base_Url +"/api/v1/contas/pendentes/"+contaId+"/reprovar",{id : id, motivo: motivo},this.httpOptions).subscribe( (resp => {
-      console.log(resp);
-    }));
- }
-   buscarPorCpf(cpf:any) {
-    if(parseInt(cpf)){
-      return this.httpClient.get<Usuario>(this.Base_Url +"/api/v1/clientes/" + cpf, this.httpOptions)
-    }
-    return null
-   }
+
+
+
 }

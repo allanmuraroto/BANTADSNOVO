@@ -1,0 +1,21 @@
+.title {
+    padding-bottom: 20px;
+    color: #108d2f;
+}
+
+.negative-balance {
+    color:  rgb(221, 54, 54);
+}
+
+label {
+    font-size: 18px;
+}
+
+span {
+    font-size: 18px;
+    float: right;
+}
+
+h3 {
+    margin-top: 30px;
+}

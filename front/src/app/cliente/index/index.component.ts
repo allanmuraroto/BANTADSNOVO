@@ -1,15 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { hide } from '@popperjs/core';
 import { LoginService } from 'src/app/auth/services/login.service';
-import { Conta } from 'src/app/shared/models/conta';
-import { Usuario } from 'src/app/shared/models/usuario.model';
 import { ModalDepositoComponent } from '../modal-deposito/modal-deposito.component';
 import { ModalExtratosComponent } from '../modal-extratos/modal-extratos.component';
 import { ModalSaldoComponent } from '../modal-saldo/modal-saldo.component';
 import { ModalSaqueComponent } from '../modal-saque/modal-saque.component';
 import { ModalTransferenciaComponent } from '../modal-transferencia/modal-transferencia.component';
 import { ClienteService } from '../services/cliente.service';
+
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',

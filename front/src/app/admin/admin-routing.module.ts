@@ -20,7 +20,7 @@ export const routes: Routes = [
   {
     path:'admin/gerentes',
     component: ListarGerentesComponent,
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
     data: {
       role:'administrador'
     }

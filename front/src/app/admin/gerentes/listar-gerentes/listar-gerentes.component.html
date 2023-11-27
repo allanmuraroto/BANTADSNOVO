@@ -1,7 +1,7 @@
-<div class="container" style="margin-top: 40px; width: 800px">
+<div class="container">
   <div class="d-flex flex-column gap-5 justify-center">
-    <div class="d-flex justify-content-between">
-      <h2 style="display: inline">Lista de gerentes</h2>
+    <div class="d-flex justify-content-between header">
+      <h1>Lista de gerentes</h1>
       <div class="d-flex justify-content-end">
         <button [routerLink]="'/admin/gerente'" type="button" class="btn btn-success">
           Criar gerente <i class="fa fa-plus" aria-hidden="true"></i>
@@ -12,9 +12,9 @@
     <table class="table" style="text-align: center">
       <thead class="thead-dark">
         <tr>
-          <th scope="col">nome</th>
+          <th scope="col">Nome</th>
           <th scope="col">CPF</th>
-          <th scope="col">email</th>
+          <th scope="col">E-mail</th>
           <th></th>
         </tr>
       </thead>

@@ -1,24 +1,26 @@
 <div class="container-fluid mt-5">
   <div class="container">
-    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
-      <thead>
-        <tr>
-          <th>Cpf</th>
-          <th>Nome</th>
-          <th>Saldo</th>
-          <th>cidade</th>
-          <th>estado</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let person of clientes">
-          <td>{{ person.cpf }}</td>
-          <td>{{ person.nome }}</td>
-          <td>R$ {{ person.conta?.saldo }}</td>
-          <td>{{ person.endereco?.cidade }}</td>
-          <td>{{ person.endereco?.estado }}</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="client-list text-center mx-auto col-md-10">
+      <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover mt-5">
+        <thead>
+          <tr>
+            <th>CPF</th>
+            <th>Nome</th>
+            <th>Saldo</th>
+            <th>cidade</th>
+            <th>estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let person of clientes">
+            <td>{{ person.cpf }}</td>
+            <td>{{ person.nome }}</td>
+            <td>R$ {{ person.conta?.saldo }}</td>
+            <td>{{ person.endereco?.cidade }}</td>
+            <td>{{ person.endereco?.estado }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

@@ -1,0 +1,30 @@
+<app-gerente-header></app-gerente-header>
+<div class="container mt-5">
+    <h1 class="text-center">Clientes</h1>
+    <div class="d-flex justify-content-end h-100 mt-5">
+        <div class="searchbar">
+            <input class="search_input" type="text" name="termoDeBusca" placeholder="Pesquisar cliente..." [(ngModel)]="termoDeBusca" (input)="pesquisar(termoDeBusca)">
+            <div class="search_icon"><i class="fas fa-search"></i></div>
+        </div>
+    </div>
+    <table class="mt-1">
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col" class="w-25">CPF</th>
+                <th scope="col">Cidade</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Saldo da Conta</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="row-tbody" *ngFor="let cliente of clientes | filtroDeBusca: termoDeBusca">
+                <td scope="row" class="field-nome"><a routerLink="/gerente/clientes/1">{{cliente.nome | caixaAlta}}</a></td>
+                <td scope="row" class="field-cpf">{{cliente.cpf}}</td>
+                <td scope="row" class="field-cidade">{{cliente.cidade}}</td>
+                <td scope="row" class="field-estado">{{cliente.estado}}</td>
+                <td scope="row" class="field-saldo">R${{cliente.saldo}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

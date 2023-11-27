@@ -1,0 +1,36 @@
+.card {
+    margin-top:30px;
+    background-color: rgb(69, 84, 153);
+    border-radius:10px;
+    min-height: 300px;
+    min-width: 200px;
+    width:100%;
+    padding:5%;
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+
+#icon{
+    max-height:550px;
+    max-width:100%;
+    margin-left:25%;
+    margin-right:25%;
+    margin-top:10%;
+    margin-bottom:10%;
+}
+
+#name{
+    max-width:80%;
+    text-align: center;
+    margin-left:10%;
+    margin-right:10%;
+    margin-bottom:10%;
+    color:white;
+}
+
+#text{
+    color:white;
+    margin-top:1%;
+}
+
